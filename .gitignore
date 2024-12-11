@@ -1,0 +1,5 @@
+/target
+scala/.bloop
+.metals/
+scala/.metals/
+*.class

@@ -1,0 +1,21 @@
+[package]
+name = "advent_of_code-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4.8"
+
+[dependencies.advent_of_code]
+path = ".."
+
+[[bin]]
+name = "day9"
+path = "fuzz_targets/day9.rs"
+test = false
+doc = false
+bench = false
