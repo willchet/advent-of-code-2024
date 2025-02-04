@@ -7,7 +7,7 @@ my $part2     = 0;
 my $activated = 1;
 
 while ( my $input = <STDIN> ) {
-    chomp($input);
+    chomp $input;
 
     while ( $input =~ /(mul\((\d{1,3}),(\d{1,3})\))|(do\(\))|(don't\(\))/g ) {
         if ( defined $1 ) {
