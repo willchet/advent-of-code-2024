@@ -2,12 +2,9 @@ day1 <- function(list1, list2) {
     list1 <- sort(list1)
     list2 <- sort(list2)
 
-    difference <- 0
-    for (i in 1:length(list1)) {
-        difference <- difference + abs(list1[i] - list2[i])
-    }
+    difference <- sum(abs(list1-list2))
 
-    score <- 0;
+    score <- 0
     i <- 1
     j <- 1
 
@@ -18,8 +15,8 @@ day1 <- function(list1, list2) {
             value <- list1[i];
             i <- i + 1
             j <- j + 1
-            list1_counter <- 1;
-            list2_counter <- 1;
+            list1_counter <- 1
+            list2_counter <- 1
             
             if (i <= length(list1) && j <= length(list2)) {
                 while(i <= length(list1) && list1[i] == value) {
@@ -33,12 +30,6 @@ day1 <- function(list1, list2) {
             }
             
             score <- score + list1_counter * list2_counter * value;
-            print(score)
-            print(list1_counter)
-            print(list2_counter)
-            print(value)
-            print(i)
-            print(j)
         } else {
             j <- j + 1
         }
